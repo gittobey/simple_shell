@@ -3,4 +3,4 @@
 * A simple Unix command interpreter.
 
 ## Authors
-* **Sangwani Peter** - *Student* Zyambo - [sangwani-coder](https://github.com/sangwani-coder)
+* **Sangwani P. Zyambo** - *Student* - [sangwani-coder](https://github.com/sangwani-coder)
