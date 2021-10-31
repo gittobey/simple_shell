@@ -14,7 +14,7 @@
  *
  * Return: The process id of the executed program
  */
-int call_command(__attribute__((unused)) char *program, char **arg_list)
+int call_command(char *program, char **arg_list)
 {
 	pid_t child_pid;
 	child_pid = fork();
@@ -25,7 +25,7 @@ int call_command(__attribute__((unused)) char *program, char **arg_list)
 	{
 		/*Search for program in path and execute*/
 		printf("arg 0 1: %s %s\n",arg_list[0], arg_list[1]);
-		execve(arg_list[0], arg_list, NULL);
+		execve(program, arg_list, NULL);
 		perror("./shell");
 	}
 
@@ -40,7 +40,9 @@ int main()
 {
 	char *cmd;
 	char stream_chars;
-	char *arg_list[] = {NULL, NULL};
+	char *arg_list[2];
+       	arg_list[0] = "/bin/ls";
+	arg_list[1] = NULL;
        	/* environment variable
 	char *envp[] = {"PATH=/bin", 0};*/
 	size_t buf_size = 10;
@@ -48,11 +50,11 @@ int main()
 	cmd = (char *)malloc(buf_size);
 	while (1)
 	{
-		write(1, "$ ", 2); /* display prompt on screen */
+		write(1, "$ ", 2); /* display prompt on screen*/
 
 		char **str_ptr = &cmd; /*double pointer to cmd*/
 		stream_chars = getline(str_ptr, &buf_size, stdin); /* read input from terminal*/
-		arg_list[0] = cmd;
+		/*arg_list[0] = cmd;*/
 
 		if (stream_chars < 0)
 			break;
