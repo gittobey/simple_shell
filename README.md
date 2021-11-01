@@ -1,6 +1,6 @@
 # Project 0x16 - simple_shell
 ## simple_shell
-* This is a collaborative project made by Sangwani P. Zyambo and Brendah Uwitonze, Students of software engineering at ALX/Holberton school. This repo contains files for the ##simple_shell project##. The project requires us to develop our own UNIX command interpreter (shell).
+* This is a collaborative project made by Sangwani P. Zyambo and Brendah Uwitonze, Students of software engineering at ALX/Holberton school. This repo contains files for the **simple_shell project**. The project requires us to develop our own UNIX command interpreter (shell).
 
 ## File structure
 
