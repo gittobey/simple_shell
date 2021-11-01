@@ -15,8 +15,8 @@ These are the files with custom system calls and functions with a brief descript
 | ['AUTHORS'](./AUTHORS) | File containing a list of contributors to the repository |
 
 ## Requirements
-This simple_shell project is designed ro run on the Ubuntu 20.04 LTS using gcc, and can be compiled using the options -wall - werror -wextra -pedantic -std=gnu89
-The code should use the ![Betty style](https://github.com/holbertonschool/Bettty).
+This simple_shell project is designed to run on the Ubuntu 20.04 LTS using gcc, and can be compiled using the options -wall - werror -wextra -pedantic -std=gnu89
+The code should use the [Betty style](https://github.com/holbertonschool/Betty).
 
 ## Authors
 * **Sangwani P. Zyambo** - [sangwani-coder](https://github.com/sangwani-coder)
