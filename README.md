@@ -20,4 +20,4 @@ The code should use the [Betty style](https://github.com/holbertonschool/Betty).
 
 ## Authors
 * **Sangwani P. Zyambo** - [sangwani-coder](https://github.com/sangwani-coder)
-* **Brendah Uwitonze**
+* **Brendah Uwitonze**   - [Uwitonzebrendah](https://github.com/uwitonzebrendah)
