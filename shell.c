@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
 
 	if (argc < 1)
 		return (-1);
+	signal(SIGINT, handle_sig);
 
 	cmd = (char *)malloc(buf_size);
 
@@ -98,4 +99,16 @@ int cmd_type(char *cmd)
 		return (1);
 	}
 	return (0);
+}
+
+/**
+ *handle_sig - the program allows Ctrl + C to be printed
+ *@sig: signum
+ *
+ * Return: void
+ */
+void handle_sig(int  n __attribute__((unused)))
+{
+	write(STDERR_FILENO, "\n", 1);
+	write(STDERR_FILENO, "$ ", 2);
 }

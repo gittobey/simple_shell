@@ -8,14 +8,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include <sys/wait.h>
-
+#include <signal.h>
 /*string handlers*/
 char *concat_str(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 
 /*command handlers*/
 int call_command(char *program, char *cmd, char **argv);
-void prompt();
+void prompt(void);
 
 /*built-ins*/
 int builtin_cmd(char *cmd);
@@ -27,6 +27,7 @@ extern char **environ;
 
 /*helper functions*/
 int cmd_type(char *cmd);
+void handle_sig(int n);
 /**
  *struct built-ins - Handles the exit and env builtins
  *@exit: First member
