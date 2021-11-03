@@ -13,7 +13,6 @@ int call_command(char *program, char *cmd, char **arg_list)
 {
 	pid_t child_pid;
 
-	char *env[] = { NULL };
 	char dest[50], src[50];
 
 	strcpy(dest, "/bin/");
@@ -30,7 +29,7 @@ int call_command(char *program, char *cmd, char **arg_list)
 
 	execve(cmd, arg_list, NULL);
 	perror(program);
-
+	return (0);
 }
 
 /**
@@ -46,6 +45,7 @@ int main(int argc, char *argv[])
 	char stream_chars;
 	char *arg_list[] = {NULL, NULL};
 	size_t buf_size = 10;
+	char **str_ptr;
 
 	if (argc < 1)
 		return (-1);
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 	{
 		write(1, "$ ", 2); /* display prompt on screen*/
 
-		char **str_ptr = &cmd; /*double pointer to cmd*/
+		str_ptr = &cmd; /*double pointer to cmd*/
 		/*Read input from terminal*/
 		stream_chars = getline(str_ptr, &buf_size, stdin);
 		token = strtok(cmd, "\n");
