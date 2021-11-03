@@ -15,6 +15,7 @@ int _strcmp(char *s1, char *s2);
 
 /*command handlers*/
 int call_command(char *program, char *cmd, char **argv);
+void prompt();
 
 /*built-ins*/
 int builtin_cmd(char *cmd);

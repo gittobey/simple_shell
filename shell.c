@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 
 	while (1)
 	{
-		write(1, "$ ", 2); /* display prompt on screen*/
+		prompt(); /* display prompt on screen*/
 
 		str_ptr = &cmd; /*double pointer to cmd*/
 		/*Read input from terminal*/
@@ -73,6 +73,17 @@ int main(int argc, char *argv[])
 	free(cmd);
 	return (0);
 }
+/**
+ *prompt - print the prompt in interactive mode
+ *
+ *Return: void
+ */
+void prompt(void)
+{
+	write(STDERR_FILENO, "$ ", 2);
+}
+
+
 /**
  *cmd_type - checks to see if the command
  *is a built-in or an executable
