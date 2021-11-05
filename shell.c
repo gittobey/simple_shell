@@ -40,7 +40,7 @@ int main(int argc, char *argv[], char *envp[])
 			continue;
 		path = _getpath();
 		paths = tokenize(path);
-		pathcmd = sreach_path(paths, cmd[0]);
+		pathcmd = search_path(paths, cmd[0]);
 		if (pathcmd == NULL)
 			perror(argv[0]);
 		else
@@ -70,7 +70,7 @@ void prompt_printer(void)
 /**
  * handle_sig - Allows ctrl+C to be printed by the shell
  * @n: signum
- * 
+ *
  * Return: void
  */
 void handle_sig(int n __attribute__((unused)))

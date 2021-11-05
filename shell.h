@@ -25,7 +25,7 @@ char *_getpath(void);
 char **tokenize(char *str);
 void exec_cmd(char *c, char **cmd);
 char *append_path(char *path, char *cmd);
-char *sreach_path(char **p, char *cmd);
+char *search_path(char **p, char *cmd);
 
 /*built-ins*/
 void env_builtin(void);
@@ -76,7 +76,7 @@ struct info
  * @interactive: First member
  *
  * Description: used to handle
- * 
+ *
  * boolean switches
  */
 struct flags

@@ -32,7 +32,7 @@ char *_getpath(void)
 
 
 /**
- * sreach_path - searches for PATH dir
+ * search_path - searches for PATH dir
  * containing command
  * @p: first operand
  * @cmd: second operand
@@ -40,7 +40,7 @@ char *_getpath(void)
  * Return: unsigned int character count
  */
 
-char *sreach_path(char **p, char *cmd)
+char *search_path(char **p, char *cmd)
 {
 	int i = 0;
 
