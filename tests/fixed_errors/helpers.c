@@ -1,7 +1,6 @@
 #include "shell.h"
-
 /**
- * exec_cmd - This program creates a new child process
+ * exec_cmd - This program creates a new child process,
  * executes a command, and waits for the child process
  * to update its status
  * @c: command
